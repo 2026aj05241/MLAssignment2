@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "features": [
+    "Area",
+    "Perimeter",
+    "MajorAxisLength",
+    "MinorAxisLength",
+    "AspectRation",
+    "Eccentricity",
+    "ConvexArea",
+    "EquivDiameter",
+    "Extent",
+    "Solidity",
+    "roundness",
+    "Compactness",
+    "ShapeFactor1",
+    "ShapeFactor2",
+    "ShapeFactor3",
+    "ShapeFactor4"
+  ],
+  "target": "Class",
+  "classes": [
+    "BARBUNYA",
+    "BOMBAY",
+    "CALI",
+    "DERMASON",
+    "HOROZ",
+    "SEKER",
+    "SIRA"
+  ],
+  "seed": 42,
+  "python": "3.11.2",
+  "versions": {
+    "scikit-learn": "1.6.1",
+    "numpy": "2.2.6",
+    "pandas": "2.3.3",
+    "scipy": "1.15.3",
+    "joblib": "1.5.2"
+  },
+  "primary_metric": "macro F1",
+  "metric_conventions": "Precision/Recall/F1: macro over all 7 classes, zero_division=0; AUC: macro OVR from predict_proba; MCC: multiclass.",
+  "train_sha256": "2907b9070edfebd330701aad5a4b526038a0322ed0b776b58a92b8afc4b5e158",
+  "test_sha256": "3579b0cb972879419a6028d60bd701a37d761d1154309fa90df9b8ddcb41ecf7",
+  "models": {
+    "logistic_regression": {
+      "name": "Logistic Regression",
+      "file": "logistic_regression.joblib",
+      "sha256": "46139b25bd2375eef2feebda84fc64965b8e329bd3928601d2d4e8d1430f6073",
+      "parameters": {
+        "classifier__C": 1.0,
+        "classifier__class_weight": null,
+        "classifier__dual": false,
+        "classifier__fit_intercept": true,
+        "classifier__intercept_scaling": 1,
+        "classifier__l1_ratio": null,
+        "classifier__max_iter": 2000,
+        "classifier__multi_class": "deprecated",
+        "classifier__n_jobs": null,
+        "classifier__penalty": "l2",
+        "classifier__random_state": 42,
+        "classifier__solver": "lbfgs",
+        "classifier__tol": 0.0001,
+        "classifier__verbose": 0,
+        "classifier__warm_start": false
+      }
+    }
+  }
+}
