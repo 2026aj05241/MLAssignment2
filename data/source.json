@@ -1,0 +1,9 @@
+{
+  "title": "Dry Bean",
+  "creator": "Murat Koklu",
+  "year": 2020,
+  "doi": "10.24432/C50S4B",
+  "source_url": "https://archive.ics.uci.edu/static/public/602/dry+bean+dataset.zip",
+  "license": "CC BY 4.0",
+  "source_zip_sha256": "0a64eff5be87f48c3dbbfc0a12a56c5d5b5167ef8e61cd45d69b3e7c7130c06f"
+}
