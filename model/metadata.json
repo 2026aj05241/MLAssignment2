@@ -63,6 +63,26 @@
         "classifier__verbose": 0,
         "classifier__warm_start": false
       }
+    },
+    "decision_tree": {
+      "name": "Decision Tree",
+      "file": "decision_tree.joblib",
+      "sha256": "3678abd02a643101aba71c3a23b07941c5acb5484555ff47c85987c8ac64f8ce",
+      "parameters": {
+        "classifier__ccp_alpha": 0.0,
+        "classifier__class_weight": null,
+        "classifier__criterion": "gini",
+        "classifier__max_depth": 12,
+        "classifier__max_features": null,
+        "classifier__max_leaf_nodes": null,
+        "classifier__min_impurity_decrease": 0.0,
+        "classifier__min_samples_leaf": 3,
+        "classifier__min_samples_split": 2,
+        "classifier__min_weight_fraction_leaf": 0.0,
+        "classifier__monotonic_cst": null,
+        "classifier__random_state": 42,
+        "classifier__splitter": "best"
+      }
     }
   }
 }
