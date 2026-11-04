@@ -98,6 +98,15 @@
         "classifier__p": 2,
         "classifier__weights": "distance"
       }
+    },
+    "naive_bayes": {
+      "name": "Naive Bayes",
+      "file": "naive_bayes.joblib",
+      "sha256": "021301549cfc6cbdb4478ea55bd4e3764654bf7b58602d30a662db448168bb93",
+      "parameters": {
+        "classifier__priors": null,
+        "classifier__var_smoothing": 1e-09
+      }
     }
   }
 }
