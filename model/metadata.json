@@ -83,6 +83,21 @@
         "classifier__random_state": 42,
         "classifier__splitter": "best"
       }
+    },
+    "knn": {
+      "name": "KNN",
+      "file": "knn.joblib",
+      "sha256": "41e45c3d96b93a6433dcf6cea608b5ee2ebc3a854159e95fbc0903e59d4641a3",
+      "parameters": {
+        "classifier__algorithm": "auto",
+        "classifier__leaf_size": 30,
+        "classifier__metric": "minkowski",
+        "classifier__metric_params": null,
+        "classifier__n_jobs": 1,
+        "classifier__n_neighbors": 9,
+        "classifier__p": 2,
+        "classifier__weights": "distance"
+      }
     }
   }
 }
