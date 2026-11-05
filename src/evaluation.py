@@ -28,7 +28,9 @@ def evaluate(model, frame):
         'Precision': float(precision_score(target, predicted, **common)),
         'Recall': float(recall_score(target, predicted, **common)),
         'F1': float(f1_score(target, predicted, **common)),
-        'MCC': float(matthews_corrcoef(target, predicted)),
+        # sklearn defines the zero-denominator case as 0; avoid its single-label warning.
+        'MCC': (0.0 if len(set(target) | set(predicted)) == 1
+                else float(matthews_corrcoef(target, predicted))),
     }
     return {
         'metrics': metrics, 'auc_note': note,

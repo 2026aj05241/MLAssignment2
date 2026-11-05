@@ -2,7 +2,7 @@
 
 ## Project status
 
-Snapshot 09: All five models are reproducible through one command, with training-only CV selection, final held-out evaluation, and independent metric checks.
+Snapshot 11: Complete app with five-model comparison, downloads, normalized confusion matrices, customized theme, and robustness fixes. All 25 tests pass.
 
 ## Problem statement
 
@@ -77,9 +77,22 @@ python -m pip install -r requirements.txt
 python -m streamlit run app.py
 ```
 
-The current app displays the project introduction, models, and metrics.
-It does not yet accept CSV uploads or perform inference. Dependencies are pinned. Use Python 3.11 for training and deployment; this is
-the environment used to validate the project.
+The app accepts the included held-out data or a labeled CSV upload, lets you
+select one of five saved models, and displays six metrics, a confusion matrix,
+and a classification report. A separate comparison tab evaluates all five
+models on the same selected data, with downloadable comparison and prediction
+CSVs, row-normalized confusion matrices, and class distributions. It never
+retrains on uploaded data. Dependencies
+are pinned; use Python 3.11 for training and deployment.
+
+CSV schema: all 16 original feature names plus `Class`, with no extra columns.
+Column order may differ. Targets must match the seven uppercase class names.
+Blank feature cells use training medians; entirely blank feature columns,
+non-numeric values, infinite values, duplicate headers, and malformed rows are
+rejected. Limits: 10 MiB and 20,000 rows. AUC displays N/A when any of the seven
+classes is absent; macro Precision/Recall/F1 always use all seven classes,
+including zero contribution for absent classes. Uploaded data is processed in
+memory and is not written to project files.
 
 ## Training and validation
 

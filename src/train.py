@@ -54,6 +54,9 @@ def train_one(slug, pipeline=None, selection=None):
     summary.update({'model': module.NAME, 'slug': slug, 'fit_seconds': fit_seconds,
                     'selection': selection or 'Fixed baseline configuration; no test-set tuning.'})
     (ROOT / f'results/{slug}.json').write_text(json.dumps(summary, indent=2, allow_nan=False) + '\n')
+    if not isinstance(selection, dict):
+        # A manual baseline retrain invalidates any previous five-model CV selection.
+        (ROOT / 'results/cross_validation.json').unlink(missing_ok=True)
     metadata_path = ROOT / 'model/metadata.json'
     info = json.loads(metadata_path.read_text()) if metadata_path.exists() else {}
     info.update({'schema_version': 1, 'features': FEATURES, 'target': TARGET, 'classes': CLASSES,
