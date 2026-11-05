@@ -132,6 +132,13 @@
   },
   "model": "Naive Bayes",
   "slug": "naive_bayes",
-  "fit_seconds": 0.019880499996361323,
-  "selection": "Fixed baseline configuration; no test-set tuning."
+  "fit_seconds": 0.019803125003818423,
+  "selection": {
+    "method": "3-fold stratified training-only CV",
+    "primary_metric": "macro F1",
+    "best_params": {
+      "classifier__var_smoothing": 1e-09
+    },
+    "best_cv_f1": 0.9068269147519566
+  }
 }

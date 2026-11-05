@@ -45,9 +45,9 @@
     "logistic_regression": {
       "name": "Logistic Regression",
       "file": "logistic_regression.joblib",
-      "sha256": "46139b25bd2375eef2feebda84fc64965b8e329bd3928601d2d4e8d1430f6073",
+      "sha256": "f3123f84cb6282ac5f0183540af7c17bec567c63b7856f29daaf5066c554a5b9",
       "parameters": {
-        "classifier__C": 1.0,
+        "classifier__C": 10.0,
         "classifier__class_weight": null,
         "classifier__dual": false,
         "classifier__fit_intercept": true,
@@ -67,12 +67,12 @@
     "decision_tree": {
       "name": "Decision Tree",
       "file": "decision_tree.joblib",
-      "sha256": "3678abd02a643101aba71c3a23b07941c5acb5484555ff47c85987c8ac64f8ce",
+      "sha256": "cfcd67bc49b47152f325c92ec74babe1ea8ad30e43042755c204547a16a91983",
       "parameters": {
         "classifier__ccp_alpha": 0.0,
         "classifier__class_weight": null,
         "classifier__criterion": "gini",
-        "classifier__max_depth": 12,
+        "classifier__max_depth": 8,
         "classifier__max_features": null,
         "classifier__max_leaf_nodes": null,
         "classifier__min_impurity_decrease": 0.0,
@@ -87,14 +87,14 @@
     "knn": {
       "name": "KNN",
       "file": "knn.joblib",
-      "sha256": "41e45c3d96b93a6433dcf6cea608b5ee2ebc3a854159e95fbc0903e59d4641a3",
+      "sha256": "d3099df2e10331285fb5e7348e9aa853b2edb278096f0cc350d53ce95cc93208",
       "parameters": {
         "classifier__algorithm": "auto",
         "classifier__leaf_size": 30,
         "classifier__metric": "minkowski",
         "classifier__metric_params": null,
         "classifier__n_jobs": 1,
-        "classifier__n_neighbors": 9,
+        "classifier__n_neighbors": 15,
         "classifier__p": 2,
         "classifier__weights": "distance"
       }
@@ -106,6 +106,28 @@
       "parameters": {
         "classifier__priors": null,
         "classifier__var_smoothing": 1e-09
+      }
+    },
+    "svm": {
+      "name": "Support Vector Machine",
+      "file": "svm.joblib",
+      "sha256": "db8475f3f1264ac3b9fab54c76b4a63cbd2e6e9dd8407b61ae1977272c7544d6",
+      "parameters": {
+        "classifier__C": 3.0,
+        "classifier__break_ties": false,
+        "classifier__cache_size": 256,
+        "classifier__class_weight": null,
+        "classifier__coef0": 0.0,
+        "classifier__decision_function_shape": "ovr",
+        "classifier__degree": 3,
+        "classifier__gamma": "scale",
+        "classifier__kernel": "rbf",
+        "classifier__max_iter": -1,
+        "classifier__probability": true,
+        "classifier__random_state": 42,
+        "classifier__shrinking": true,
+        "classifier__tol": 0.001,
+        "classifier__verbose": false
       }
     }
   }

@@ -1,0 +1,170 @@
+{
+  "method": "3-fold stratified CV on training data only",
+  "primary_metric": "macro F1",
+  "selected_model": "svm",
+  "models": [
+    {
+      "slug": "decision_tree",
+      "model": "Decision Tree",
+      "method": "3-fold stratified training-only CV",
+      "primary_metric": "macro F1",
+      "best_params": {
+        "classifier__max_depth": 8,
+        "classifier__min_samples_leaf": 3
+      },
+      "best_cv_f1": 0.9176455636720017,
+      "candidates": [
+        {
+          "params": {
+            "classifier__max_depth": 8,
+            "classifier__min_samples_leaf": 3
+          },
+          "mean_f1": 0.9176455636720017,
+          "std_f1": 0.0031500475299877707
+        },
+        {
+          "params": {
+            "classifier__max_depth": 12,
+            "classifier__min_samples_leaf": 3
+          },
+          "mean_f1": 0.91615703395167,
+          "std_f1": 0.0040185389072092655
+        },
+        {
+          "params": {
+            "classifier__max_depth": null,
+            "classifier__min_samples_leaf": 3
+          },
+          "mean_f1": 0.9160239843950468,
+          "std_f1": 0.002938411810370288
+        }
+      ]
+    },
+    {
+      "slug": "knn",
+      "model": "KNN",
+      "method": "3-fold stratified training-only CV",
+      "primary_metric": "macro F1",
+      "best_params": {
+        "classifier__n_neighbors": 15
+      },
+      "best_cv_f1": 0.9365271300338188,
+      "candidates": [
+        {
+          "params": {
+            "classifier__n_neighbors": 5
+          },
+          "mean_f1": 0.9333638734846303,
+          "std_f1": 0.0014830753648061475
+        },
+        {
+          "params": {
+            "classifier__n_neighbors": 9
+          },
+          "mean_f1": 0.9360993575039945,
+          "std_f1": 0.0005905415182736292
+        },
+        {
+          "params": {
+            "classifier__n_neighbors": 15
+          },
+          "mean_f1": 0.9365271300338188,
+          "std_f1": 0.0018865288797458373
+        }
+      ]
+    },
+    {
+      "slug": "logistic_regression",
+      "model": "Logistic Regression",
+      "method": "3-fold stratified training-only CV",
+      "primary_metric": "macro F1",
+      "best_params": {
+        "classifier__C": 10.0
+      },
+      "best_cv_f1": 0.9369147344744309,
+      "candidates": [
+        {
+          "params": {
+            "classifier__C": 0.1
+          },
+          "mean_f1": 0.9364908577862244,
+          "std_f1": 0.0014885671385376435
+        },
+        {
+          "params": {
+            "classifier__C": 1.0
+          },
+          "mean_f1": 0.9365288536587331,
+          "std_f1": 0.0014544255988202177
+        },
+        {
+          "params": {
+            "classifier__C": 10.0
+          },
+          "mean_f1": 0.9369147344744309,
+          "std_f1": 0.0005395590160776039
+        }
+      ]
+    },
+    {
+      "slug": "naive_bayes",
+      "model": "Naive Bayes",
+      "method": "3-fold stratified training-only CV",
+      "primary_metric": "macro F1",
+      "best_params": {
+        "classifier__var_smoothing": 1e-09
+      },
+      "best_cv_f1": 0.9068269147519566,
+      "candidates": [
+        {
+          "params": {
+            "classifier__var_smoothing": 1e-09
+          },
+          "mean_f1": 0.9068269147519566,
+          "std_f1": 0.006417508917626619
+        },
+        {
+          "params": {
+            "classifier__var_smoothing": 1e-07
+          },
+          "mean_f1": 0.9068269147519566,
+          "std_f1": 0.006417508917626619
+        },
+        {
+          "params": {
+            "classifier__var_smoothing": 1e-05
+          },
+          "mean_f1": 0.9068269147519566,
+          "std_f1": 0.006417508917626619
+        }
+      ]
+    },
+    {
+      "slug": "svm",
+      "model": "Support Vector Machine",
+      "method": "3-fold stratified training-only CV",
+      "primary_metric": "macro F1",
+      "best_params": {
+        "classifier__C": 3.0
+      },
+      "best_cv_f1": 0.9432994843544171,
+      "candidates": [
+        {
+          "params": {
+            "classifier__C": 1.0
+          },
+          "mean_f1": 0.9410124023333987,
+          "std_f1": 0.002582986624423557
+        },
+        {
+          "params": {
+            "classifier__C": 3.0
+          },
+          "mean_f1": 0.9432994843544171,
+          "std_f1": 0.002623700314573388
+        }
+      ]
+    }
+  ],
+  "note": "Test scores are descriptive final evaluation, not inputs to parameter or winner selection."
+}
