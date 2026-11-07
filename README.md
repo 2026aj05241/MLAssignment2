@@ -252,8 +252,6 @@ Streamlit smoke test. Hosted deployment remains the owner's manual step.
 ├── README.md
 ├── .gitignore
 ├── .python-version
-├── DEPLOYMENT.md
-├── deployment_links.json
 ├── .streamlit/config.toml
 ├── test_data.csv
 ├── data/
@@ -281,9 +279,6 @@ Streamlit smoke test. Hosted deployment remains the owner's manual step.
 │   └── metadata.json
 ├── results/
 ├── tests/
-├── scripts/
-│   ├── download_data.py
-│   ├── build_report.py
-│   └── finalize_links.py
-└── reports/submission.pdf
+└── scripts/
+    └── download_data.py
 ```
